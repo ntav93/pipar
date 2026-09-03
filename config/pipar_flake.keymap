@@ -44,7 +44,7 @@
             display-name = "Layout 1";
 
             bindings = <
-                &mkp MB4          &kp C_MUTE       &to LAYOUT_2
+                &kp LA(LEFT)      &kp C_MUTE       &to LAYOUT_2
                 &kp LSHIFT        &kp LC(C)        &kp LC(V)
                 &kp LCTRL         &kp LGUI         &kp LG(LS(S))
             >;
