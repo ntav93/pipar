@@ -8,7 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define Windows 0
+#define Win 0
 #define Android 1
 
 / {
@@ -77,7 +77,7 @@
             display-name = "Android";
 
             bindings = <
-                &kp C_AC_BACK     &kp C_AC_HOME    &to Windows
+                &kp C_AC_BACK     &kp C_AC_HOME    &to Win
                 &kp LSHIFT        &kp LC(C)        &kp LC(V)
                 &kp LCTRL         &kp LMETA        &kp LG(LS(S))
             >;
