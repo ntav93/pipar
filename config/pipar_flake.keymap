@@ -8,8 +8,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define LAYOUT_1 0
-#define LAYOUT_2 1
+#define Windows 0
+#define Android 1
 
 / {
     sensors: sensors {
@@ -22,14 +22,14 @@
         compatible = "zmk,keymap";
 
         // ============================================================
-        // LAYOUT 1
+        // Windows
         //
         // ┌──────────┬──────────┬──────────┐
-        // │   BACK   │   MUTE   │ ENCODER  │
+        // │   BACK   │ WIN+TAB  │ ENCODER  │
         // ├──────────┼──────────┼──────────┤
-        // │ LSHIFT   │ CTRL+C   │ CTRL+V   │
+        // │    ESC   │ COPY     │ PASTE    │
         // ├──────────┼──────────┼──────────┤
-        // │  LCTRL   │ WINDOWS  │ WIN+SH+S │
+        // │  LSHIFT  │ WINDOWS  │ WIN+SH+S │
         // └──────────┴──────────┴──────────┘
         //
         // Encoder:
@@ -37,16 +37,16 @@
         //   CCW = Volume Down
         //
         // Encoder press:
-        //   Chuyen sang Layout 2
+        //   Chuyen sang Android
         // ============================================================
 
-        layout_1 {
-            display-name = "Layout 1";
+        Windows {
+            display-name = "Windows";
 
             bindings = <
-                &kp LA(LEFT)      &kp C_MUTE       &to LAYOUT_2
-                &kp LSHIFT        &kp LC(C)        &kp LC(V)
-                &kp LCTRL         &kp LGUI         &kp LG(LS(S))
+                &kp LA(LEFT)      &kp LG(TAB)      &to ANDROID
+                &kp ESC           &kp C_AC_COPY    &kp C_AC_PASTE
+                &kp LEFT_SHIFT    &kp LGUI         &kp LG(LS(S))
             >;
 
             sensor-bindings = <
@@ -55,14 +55,14 @@
         };
 
         // ============================================================
-        // LAYOUT 2
+        // Android
         //
         // ┌──────────┬──────────┬──────────┐
-        // │ ESC      │ WIN+TAB  │ ENCODER  │
+        // │ BACK     │ HOME     │ ENCODER  │
         // ├──────────┼──────────┼──────────┤
         // │ LSHIFT   │ CTRL+C   │ CTRL+V   │
         // ├──────────┼──────────┼──────────┤
-        // │  LCTRL   │ WINDOWS  │ WIN+SH+S │
+        // │  LCTRL   │ META     │ WIN+SH+S │
         // └──────────┴──────────┴──────────┘
         //
         // Encoder:
@@ -70,16 +70,16 @@
         //   CCW = Volume Down
         //
         // Encoder press:
-        //   Quay lai Layout 1
+        //   Quay lai Windows
         // ============================================================
 
-        layout_2 {
-            display-name = "Layout 2";
+        Android {
+            display-name = "Android";
 
             bindings = <
-                &kp ESC       &kp LG(TAB)       &to LAYOUT_1
+                &kp C_AC_BACK     &kp C_AC_HOME    &to WINDOWS
                 &kp LSHIFT        &kp LC(C)        &kp LC(V)
-                &kp LCTRL         &kp LGUI         &kp LG(LS(S))
+                &kp LCTRL         &kp LMETA        &kp LG(LS(S))
             >;
 
             sensor-bindings = <
