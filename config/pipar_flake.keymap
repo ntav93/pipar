@@ -40,11 +40,11 @@
         //   Chuyen sang Android
         // ============================================================
 
-        Windows {
-            display-name = "Windows";
+        Win {
+            display-name = "Win";
 
             bindings = <
-                &kp LA(LEFT)      &kp LG(TAB)      &to Andoird
+                &kp LA(LEFT)      &kp LG(TAB)      &to Android
                 &kp ESC           &kp C_AC_COPY    &kp C_AC_PASTE
                 &kp LEFT_SHIFT    &kp LGUI         &kp LG(LS(S))
             >;
