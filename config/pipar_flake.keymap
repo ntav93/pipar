@@ -58,7 +58,7 @@
         // LAYOUT 2
         //
         // ┌──────────┬──────────┬──────────┐
-        // │ ALT+TAB  │ WIN+TAB  │ ENCODER  │
+        // │ ESC      │ WIN+TAB  │ ENCODER  │
         // ├──────────┼──────────┼──────────┤
         // │ LSHIFT   │ CTRL+C   │ CTRL+V   │
         // ├──────────┼──────────┼──────────┤
@@ -66,8 +66,8 @@
         // └──────────┴──────────┴──────────┘
         //
         // Encoder:
-        //   CW  = Brightness Up
-        //   CCW = Brightness Down
+        //   CW  = Volume Up
+        //   CCW = Volume Down
         //
         // Encoder press:
         //   Quay lai Layout 1
@@ -77,13 +77,13 @@
             display-name = "Layout 2";
 
             bindings = <
-                &kp LA(TAB)       &kp LG(TAB)       &to LAYOUT_1
+                &kp ESC       &kp LG(TAB)       &to LAYOUT_1
                 &kp LSHIFT        &kp LC(C)        &kp LC(V)
                 &kp LCTRL         &kp LGUI         &kp LG(LS(S))
             >;
 
             sensor-bindings = <
-                &inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC
+                &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN
             >;
         };
     };
