@@ -44,7 +44,7 @@
             display-name = "Windows";
 
             bindings = <
-                &kp LA(LEFT)      &kp LG(TAB)      &to ANDROID
+                &kp LA(LEFT)      &kp LG(TAB)      &to Andoird
                 &kp ESC           &kp C_AC_COPY    &kp C_AC_PASTE
                 &kp LEFT_SHIFT    &kp LGUI         &kp LG(LS(S))
             >;
@@ -77,7 +77,7 @@
             display-name = "Android";
 
             bindings = <
-                &kp C_AC_BACK     &kp C_AC_HOME    &to WINDOWS
+                &kp C_AC_BACK     &kp C_AC_HOME    &to Windows
                 &kp LSHIFT        &kp LC(C)        &kp LC(V)
                 &kp LCTRL         &kp LMETA        &kp LG(LS(S))
             >;
